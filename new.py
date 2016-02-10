@@ -5,7 +5,7 @@ import MySQLdb
 
 # prepare a cursor object using cursor() method
 def webpage_spider(link,table):
-	db = MySQLdb.connect("localhost","root","buildblockz",table )
+	db = MySQLdb.connect("localhost","username","password",table )
 	cursor = db.cursor()
 	sql = "CREATE TABLE IF NOT EXISTS `commentary_table_1` (`m_id` varchar( 10 ) NOT NULL ,`overs` decimal( 4, 2 ) DEFAULT NULL ,`batsman` varchar( 50 ) ,`bowler` varchar( 50 ) ,`runs_scored` int,`how_out` varchar( 50 ) ,`wicketsDown` int)"
 	cursor.execute(sql)
